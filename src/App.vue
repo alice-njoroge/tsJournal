@@ -3,11 +3,12 @@ import TheHeader from "@/components/TheHeader.vue";
 import EntryEditor from "./components/EntryEditor.vue";
 import EntryCard from "@/components/EntryCard.vue";
 import { User } from "@/Types/userName";
+import { reactive } from "vue";
 
-const user : User= {
-  name: 'Alice',
-  email: 'alice@journal.com'
-}
+const user: User = reactive({
+  name: "Alice",
+  email: "alice@journal.com"
+});
 </script>
 
 <template>
