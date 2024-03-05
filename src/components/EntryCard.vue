@@ -2,6 +2,14 @@
 import DateDisplay from "./DateDisplay.vue";
 import UseEmojis from "@/composables/UseEmojis";
 const { findEmoji } = UseEmojis();
+
+const props = defineProps<{
+  user: {
+    name: String,
+    email: String
+  }
+}>();
+
 </script>
 <template>
   <div class="entry-card">
@@ -12,7 +20,7 @@ const { findEmoji } = UseEmojis();
     <div class="entry-footer">
       <DateDisplay :date="new Date()" class="mr-2" />
       |
-      <span class="ml-2">danielkelly_io</span>
+      <span class="ml-2">{{props.user.email}}</span>
     </div>
   </div>
 </template>

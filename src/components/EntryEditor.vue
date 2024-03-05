@@ -1,10 +1,18 @@
 <script lang="ts" setup>
 import EmojiField from "@/components/EmojiField.vue";
 import ArrowCircleRight from "@/assets/icons/arrow-circle-right.svg";
+
+const props = defineProps<{
+  user: {
+    name: String,
+    email: String
+  }
+}>();
+
 </script>
 <template>
   <form class="entry-form" @submit.prevent>
-    <textarea placeholder="New Journal Entry for danielkelly_io"></textarea>
+    <textarea :placeholder="`New Journal Entry for ${props?.user?.name}`"></textarea>
     <EmojiField />
     <div class="entry-form-footer">
       <span>0 / 280</span>
