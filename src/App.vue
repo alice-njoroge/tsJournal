@@ -2,7 +2,7 @@
 import TheHeader from "@/components/TheHeader.vue";
 import EntryEditor from "./components/EntryEditor.vue";
 import EntryCard from "@/components/EntryCard.vue";
-import { User } from "@/Types/userName";
+import { User } from "@/Types/user";
 import { reactive } from "vue";
 
 const user: User = reactive({
